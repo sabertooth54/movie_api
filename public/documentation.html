@@ -13,5 +13,58 @@
       movies, directors, and genres. Users will be able to sign up, update their
       personal information, and create a list of their favorite movies. Thanks
     </p>
-  </body>
+
+    <h2>CREATE Allow new users to register</h2>
+    <p>app.post("/users", (req, res) => { const newUser = req.body;</p>
+
+    <h2>UPDATE Allow users to update their user info (username)</h2>
+    <p>
+      app.put("/users/:id", (req, res) => { const { id } = req.params; const
+      updatedUser = req.body;
+    </p>
+
+    <h2>CREATE Allow users to add a movie to their list of favorites(showing only a text that a movie has been added)</h2>
+    <p>
+      app.post("/users/:id/:moviesTitle", (req, res) => {
+      const { id, moviesTitle } = req.params;
+    </p>
+
+    <h2>DELETE Allow users to remove a movie from their list of favorites(showing only a text that a movie has been removed)/h2>
+    <p>app.delete("/users/:id/:moviesTitle", (req, res) => {
+      const { id, moviesTitle } = req.params;</p>
+
+    <h2>DELETE Allow existing users to deregister (showing only a text that a user email has been removed)</h2>
+    <p>app.delete("/users/:id", (req, res) => {
+      const { id } = req.params;</p>
+
+    <h2>READ Return a list of ALL movies to the user</h2>
+    <p>app.get("/movies", (req, res) => {
+      res.status(200).json(movies);</p>
+
+    <h2>READ Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</h2>
+    <p>app.get("/movies/:Title", (req, res) => {
+      const { title } = req.params;
+      const movie = movies.find((movie) => movie.title === title);</p>
+
+    <h2>READ Return data about a genre</h2>
+    <p>app.get("/movies/genre/:genreName", (req, res) => {
+      const { genreName } = req.params;
+      const movie = movies.find((movie) => movie.Genre.Name === genreName).Genre;</p>
+
+    <h2>READ Return data about a director</h2>
+    <p>app.get("/movies/directors/:directorName", (req, res) => {
+      const { directorName } = req.params;
+      const director = movies.find(
+        (movie) => movie.Director.Name === directorName
+      ).Director;</p>
+
+
+
+
+
+
+
+
+
+
 </html>
