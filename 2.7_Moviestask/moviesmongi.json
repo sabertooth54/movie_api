@@ -1,0 +1,181 @@
+[{
+  "_id": {
+    "$oid": "6298e2ab7c584a8645fe33aa"
+  },
+  "Title": "Titanic",
+  "Description": "The movie is about the 1912 sinking of the RMS Titanic. It stars Kate Winslet and Leonardo DiCaprio. The two play characters who are of different social classes. They fall in love after meeting aboard the ship, but it was not good for a rich girl to fall in love with a poor boy in 1912.",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "The drama genre features stories with high stakes and a lot of conflicts. They're plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+  },
+  "Director": {
+    "Name": "James Cameron",
+    "Bio": "James Francis Cameron CC is a Canadian filmmaker. Best known for making science fiction and epic films, he first gained recognition for directing The Terminator. He found further success with Aliens, The Abyss, Terminator 2: Judgment Day, and the action comedy True Lies.",
+    "Birth": "1954-08-16",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/1/18/Titanic_%281997_film%29_poster.png",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298e3dc7c584a8645fe33ab"
+  },
+  "Title": "Avatar",
+  "Description": "Jake, who is paraplegic, replaces his twin on the Na'vi inhabited Pandora for a corporate mission. After the natives accept him as one of their own, he must decide where his loyalties lie.",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "The drama genre features stories with high stakes and a lot of conflicts. They're plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+  },
+  "Director": {
+    "Name": "James Cameron",
+    "Bio": "James Francis Cameron CC is a Canadian filmmaker. Best known for making science fiction and epic films, he first gained recognition for directing The Terminator. He found further success with Aliens, The Abyss, Terminator 2: Judgment Day, and the action comedy True Lies.",
+    "Birth": "1954-08-16",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298e5217c584a8645fe33ac"
+  },
+  "Title": "Breaking Bad",
+  "Description": "Walter White, a chemistry teacher, discovers that he has cancer and decides to get into the meth-making business to repay his medical debts. His priorities begin to change when he partners with Jesse.",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "The drama genre features stories with high stakes and a lot of conflicts. They're plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+  },
+  "Director": {
+    "Name": "Vince Gilligan",
+    "Bio": "Vince Gilligan is known for his television work, specifically as creator, head writer, executive producer, and director of AMC's Breaking Bad and its spin-off Better Call Saul",
+    "Birth": "1967-02-10",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298e6b47c584a8645fe33ad"
+  },
+  "Title": "El Camino: A Breaking Bad Movie",
+  "Description": "After a dramatic escape from captivity, Jesse Pinkman must deal with his past in order to make some kind of future for himself.",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "The drama genre features stories with high stakes and a lot of conflicts. They're plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+  },
+  "Director": {
+    "Name": "Vince Gilligan",
+    "Bio": "Vince Gilligan is known for his television work, specifically as creator, head writer, executive producer, and director of AMC's Breaking Bad and its spin-off Better Call Saul",
+    "Birth": "1967-02-10",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/4/4e/El_camino_bb_film_poster.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298e7c07c584a8645fe33ae"
+  },
+  "Title": "Metastasis",
+  "Description": "Metástasis is a Colombian telenovela series, a Spanish-language remake of the crime drama Breaking Bad that transposes the events of the original from the United States to Colombia.",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "The drama genre features stories with high stakes and a lot of conflicts. They're plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+  },
+  "Director": {
+    "Name": "Vince Gilligan",
+    "Bio": "Vince Gilligan is known for his television work, specifically as creator, head writer, executive producer, and director of AMC's Breaking Bad and its spin-off Better Call Saul",
+    "Birth": "1967-02-10",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Metastasis.jpg/375px-Metastasis.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298e9707c584a8645fe33af"
+  },
+  "Title": "Last of the Summer Wine",
+  "Description": "Three elderly men from Yorkshire prefer to stay young by engaging in youthful activities while reminiscing about their young days.",
+  "Genre": {
+    "Name": "Comedy",
+    "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+  },
+  "Director": {
+    "Name": "Roy Clarke",
+    "Bio": "Royston Clarke OBE, usually known as Roy Clarke, is an English comedy writer best known for creating the sitcoms Last of the Summer Wine, Keeping Up Appearances, Open All Hours and its sequel series, Still Open All Hours.",
+    "Birth": "1930-01-28",
+    "Death": "-"
+  },
+  "ImagePath": "https://res.cloudinary.com/uktv/image/upload/b_rgb:000000,w_880,h_495/v1462964784/mepmlehkiqoeah4xs0tn.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298ea897c584a8645fe33b0"
+  },
+  "Title": "Still Open All Hours",
+  "Description": "Granville inherits a grocery store from his grandfather and his son Leroy helps him run the store while they deal with their daily life.",
+  "Genre": {
+    "Name": "Comedy",
+    "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+  },
+  "Director": {
+    "Name": "Roy Clarke",
+    "Bio": "Royston Clarke OBE, usually known as Roy Clarke, is an English comedy writer best known for creating the sitcoms Last of the Summer Wine, Keeping Up Appearances, Open All Hours and its sequel series, Still Open All Hours.",
+    "Birth": "1930-01-28",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Still_Open_All_Hours_Title_Card.jpg/375px-Still_Open_All_Hours_Title_Card.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "6298eb197c584a8645fe33b1"
+  },
+  "Title": "Open All Hours",
+  "Description": "Arkwright runs a grocery shop in Doncaster's suburb Balby and is in love with Nurse Gladys, who lives opposite his shop. However, Gladys rejects his proposals as she has to tend her ailing mother.",
+  "Genre": {
+    "Name": "Comedy",
+    "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+  },
+  "Director": {
+    "Name": "Roy Clarke",
+    "Bio": "Royston Clarke OBE, usually known as Roy Clarke, is an English comedy writer best known for creating the sitcoms Last of the Summer Wine, Keeping Up Appearances, Open All Hours and its sequel series, Still Open All Hours.",
+    "Birth": "1930-01-28",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/f/fb/Open_All_Hours_title_card.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "629918a08ac70a5ea4e38a87"
+  },
+  "Title": "The Terminator",
+  "Description": "The Terminator is a 1984 American science fiction action film directed by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a cyborg assassin sent back in time from 2029 to 1984 to kill Sarah Connor (Linda Hamilton), whose unborn son will one day save mankind from extinction by Skynet, a hostile artificial intelligence in a post-apocalyptic future.",
+  "Genre": {
+    "Name": "Thriller",
+    "Description": "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience. Tension is created by delaying what the audience sees as inevitable, and is built through situations that are menacing or where escape seems impossible."
+  },
+  "Director": {
+    "Name": "James Cameron",
+    "Bio": "James Francis Cameron CC is a Canadian filmmaker. Best known for making science fiction and epic films, he first gained recognition for directing The Terminator. He found further success with Aliens, The Abyss, Terminator 2: Judgment Day, and the action comedy True Lies.",
+    "Birth": "1954-08-16",
+    "Death": "-"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/7/70/Terminator1984movieposter.jpg",
+  "Featured": true
+},{
+  "_id": {
+    "$oid": "629919768ac70a5ea4e38a88"
+  },
+  "Title": "Silence of the Lambs",
+  "Description": "A pretty young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",
+  "Genre": {
+    "Name": "Thriller",
+    "Description": "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience. Tension is created by delaying what the audience sees as inevitable, and is built through situations that are menacing or where escape seems impossible."
+  },
+  "Director": {
+    "Name": "Jonathan Demme",
+    "Bio": "Robert Jonathan Demme was an American director, producer, and screenwriter.",
+    "Birth": "1944",
+    "Death": "2017"
+  },
+  "ImagePath": "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg",
+  "Featured": true
+}]

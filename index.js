@@ -1,3 +1,14 @@
+const mongoose = require("mongoose");
+const Models = require("./models.js");
+
+const Movies = Models.Movie;
+const Users = Models.User;
+
+mongoose.connect("mongodb://localhost:27017/movies", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 const express = require("express"),
   morgan = require("morgan");
 uuid = require("uuid");
@@ -87,6 +98,11 @@ app.get("/", (req, res) => {
   res.send("Welcome to the next level of watching movies!");
 });
 
+//READ Return a list of ALL Users to the user
+app.get("/users", (req, res) => {
+  res.status(200).json(users);
+});
+
 //CREATE Allow new users to register
 app.post("/users", (req, res) => {
   const newUser = req.body;
@@ -171,15 +187,19 @@ app.get("/movies", (req, res) => {
 });
 
 //READ Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user
-app.get("/movies/:Title", (req, res) => {
-  const { title } = req.params;
-  const movie = movies.find((movie) => movie.title === title);
 
-  if (movie) {
-    res.status(200).json(movie);
-  } else {
-    res.status(400).send("no such movie");
-  }
+app.get("/movies/:Title", (req, res) => {
+  Movies.findOne({ Title: req.params.title })
+    .then((movie) => {
+      if (movie) {
+        res.status(200).json(movie);
+      } else {
+        res.status(400).send("Movie not found");
+      }
+    })
+    .catch((err) => {
+      res.status(500).send("Error: " + err);
+    });
 });
 
 //READ Return data about a genre

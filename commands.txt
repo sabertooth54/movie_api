@@ -1,0 +1,87 @@
+
+
+ var movie10 = {
+... Title: "Open All Hours",
+... Description: "Arkwright runs a grocery shop in Doncaster's suburb Balby and is in love with Nurse Gladys, who lives opposite his shop. However, Gladys rejects his proposals as she has to tend her ailing mother.",
+... Genre: {
+... Name: "Comedy",
+... Description: "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+... },
+... Director: {
+... Name: "Roy Clarke",
+... Bio: "Royston Clarke OBE, usually known as Roy Clarke, is an English comedy writer best known for creating the sitcoms Last of the Summer Wine, Keeping Up Appearances, Open All Hours and its sequel series, Still Open All Hours.",
+... Birth:"1930-01-28",
+... Death: "-"
+... },
+... ImagePath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIWNINq9X5gXwtsRMTYnJTvcTzi7kTxE6DRFoTEpCgD5Fa78n2",
+... Featured: true
+... }
+db.movies.insertOne(movie10)
+
+
+
+
+let user5 = {
+... Username: "Hannah Ridingwoood",
+... Password: "Hangirl1",
+... Email:"hany@gmail.com",
+... Birthday: "13/04/1990",
+... FavoriteMovies:[],
+... }
+db.users.insertOne(user5)
+
+
+
+COMMANDS
+db.movies.find().pretty()
+
+db.movies.find({"Title": "Silence of the Lambs" })
+
+db.movies.find({ "Genre.Name": "Thriller", "Director.Name": "Jonathan Demme" })
+
+db.movies.updateMany(
+{Director: "James Cameron" },
+{ $set: {Bio: "James Francis Cameron CC is a Canadian filmmaker. He first gained recognition for directing The Terminator. He found further success with Aliens, The Abyss, Terminator 2: Judgment Day, and the action comedy True Lies." } }
+)
+
+db.users.update(
+{_id : ObjectId("629923648ac70a5ea4e38a95")},
+{ $push: { FavoriteMovies: ObjectId("6298ec3e7c584a8645fe33b2") } }
+)
+
+db.users.deleteOne(
+{Username: "Donny Wigglesworth"}
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience. Tension is created by delaying what the audience sees as inevitable, and is built through situations that are menacing or where escape seems impossible.
+
+
+Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.
+
+
+1.Vince Gilligan - Vince Gilligan is known for his television work, specifically as creator, head writer, executive producer, and director of AMC's Breaking Bad and its spin-off Better Call Saul. - 1967-02-10
+2.James Cameron - James Francis Cameron CC is a Canadian filmmaker. Best known for making science fiction and epic films, he first gained recognition for directing The Terminator. He found further success with Aliens, The Abyss, Terminator 2: Judgment Day, and the action comedy True Lies. -1954-08-16
+3.Roy Clarke - Royston Clarke OBE, usually known as Roy Clarke, is an English comedy writer best known for creating the sitcoms Last of the Summer Wine, Keeping Up Appearances, Open All Hours and its sequel series, Still Open All Hours. -1930-01-28
