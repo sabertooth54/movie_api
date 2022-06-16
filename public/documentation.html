@@ -20,40 +20,23 @@
     <h2>Get requests</h2>
     <p>app.get("/"</p>
 
-    <h2>CREATE Allow new users to register</h2>
+    <h2>CREATE Add a user</h2>
     <p>app.post("/users"</p>
 
-    <h2>UPDATE Allow users to update their user info (username)</h2>
-    <p>app.put("/users/:id", </p>
+    <h2>READ Get all users</h2>
+    <p>app.get("/users/:Username"</p>
 
-    <h2>CREATE Allow users to add a movie to their list of favorites(showing only a text that a movie has been added)</h2>
-    <p>app.post("/users/:id/:moviesTitle"</p>
+    <h2>READ Get a user by username</h2>
+    <p>app.get("/users/:Username",</p>
 
-    <h2>DELETE Allow users to remove a movie from their list of favorites(showing only a text that a movie has been removed)/h2>
-    <p>app.delete("/users/:id/:moviesTitle"</p>
+    <h2>UPDATE Update User credentials</h2>
+    <p>app.put("/users/:Username"</p>
 
-    <h2>DELETE Allow existing users to deregister (showing only a text that a user email has been removed)</h2>
-    <p>app.delete("/users/:id"</p>
+    <h2>UPDATE Update a user's movie list of fav's/h2>
+    <p>app.post("/users/:Username/movies/:MovieID"</p>
 
-    <h2>READ Return a list of ALL movies to the user</h2>
-    <p>app.get("/movies"</p>
-
-    <h2>READ Return data (description, genre, director, image URL, whether it's featured or not) about a single movie by title to the user</h2>
-    <p>app.get("/movies/:Title"</p>
-
-    <h2>READ Return data about a genre</h2>
-    <p>app.get("/movies/genre/:genreName"</p>
-
-    <h2>READ Return data about a director</h2>
-    <p>app.get("/movies/directors/:directorName"</p>
-
-
-
-
-
-
-
-
+    <h2>DELETE Delete a user by Username</h2>
+    <p>app.delete("/users/:Username"</p>
 
 
 </html>
