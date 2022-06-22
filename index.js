@@ -97,9 +97,9 @@ app.get(
   "/movies",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    Users.find()
-      .then((Movie) => {
-        res.status(201).json(Movie);
+    Movies.find()
+      .then((movies) => {
+        res.status(201).json(movies);
       })
       .catch(() => {
         console.error(err);
