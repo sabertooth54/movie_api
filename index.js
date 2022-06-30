@@ -17,6 +17,11 @@ const app = express();
 const bodyParser = require("body-parser"),
   methodOverride = require("method-override");
 
+const cors = require("cors");
+app.use(cors());
+
+const { check, validationResult } = require("express-validator");
+
 //Error handling code using express
 app.use(
   bodyParser.urlencoded({
@@ -47,32 +52,49 @@ app.get("/", (req, res) => {
 
 //CREATE Add a user
 
-app.post("/users", (req, res) => {
-  Users.findOne({ Username: req.body.Username })
-    .then((user) => {
-      if (user) {
-        return res.status(400).send(req.body.Username + "already exists");
-      } else {
-        Users.create({
-          Username: req.body.Username,
-          Password: req.body.Password,
-          Email: req.body.Email,
-          Birthday: req.body.Birthday,
-        })
-          .then((user) => {
-            res.status(201).json(user);
+app.post(
+  "/users",
+  // Validation logic
+  //.not().isEmpty = "is not empty"
+  //.isLegnth({min:5}) = minimum of 5 characters is allowed
+  [check("Username", "Username is required").isLegnth({ min: 5 }), check("")],
+
+  (req, res) => {
+    let hashedPassword = Users.hashPassword(req.body.Password);
+    Users.findOne({ Username: req.body.Username }) // Search to see if a user with th requuested username already exists
+      .then((user) => {
+        if (user) {
+          //If the user is found, send a response that it already exists
+          return res.status(400).send(req.body.Username + "already exists");
+        } else {
+          Users.create({
+            Username: req.body.Username,
+            Password: req.body.Password,
+            Email: req.body.Email,
+            Birthday: req.body.Birthday,
           })
-          .catch((error) => {
-            console.error(error);
-            res.status(500).send("Error: " + error);
-          });
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).send("Error: " + error);
-    });
-});
+            .then((user) => {
+              res.status(201).json(user);
+            })
+            .catch((error) => {
+              console.error(error);
+              res.status(500).send("Error: " + error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).send("Error: " + error);
+      });
+  }
+);
+
+// this code checks the validation object for errors. For the above code CREATE Add a user
+let errors = validationResult(req);
+
+if (!errors.isEmpty()) {
+  return res.status(422).json({ errors: errors.array() });
+}
 
 //READ Get all users
 
@@ -203,6 +225,7 @@ app.delete(
 app.use(express.static("public"));
 
 //listen for requests
-app.listen(8080, () => {
-  console.log("Your app is listening on port 8080.");
+const port = process.env.PORT || 8080;
+app.listen(port, "0.0.0.0", () => {
+  console.log("Listening on Port " + port);
 });
