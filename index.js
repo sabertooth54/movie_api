@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the next level of watching movies!");
 });
 
-//CREATE Add a user
+//CREATE Add a user.
 
 app.post(
   "/users",
