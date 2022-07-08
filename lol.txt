@@ -1,0 +1,17 @@
+You can and should use validation for endpoints where data could be entered via the body of an HTTP request. Your myFlix application has at least two endpoints that require data in their bodies (adding a new user and updating an existing user), both of which will require a validation code.
+
+mongoimport --uri mongodb+srv://pearain:peajail888@cluster0.6zzqy.mongodb.net/myFlixDB --collection movies --type json --file C:\Users\mako9\Documents\exported_collections\movies.json
+
+{
+  "_id": {
+    "oid": ["6298e2ab7c584a8645fe33aa"]
+  },
+  "Title": "Titanic",
+  "Description": "The movie is about the 1912 sinking of the RMS Titanic. It stars Kate Winslet and Leonardo DiCaprio. The two play characters who are of different social classes. They fall in love after meeting aboard the ship, but it was not good for a rich girl to fall in love with a poor boy in 1912.",
+  "Genre": {
+    "Name": ["Drama"],
+    "Description": [
+      "The drama genre features stories with high stakes and a lot of conflicts. They're plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+    ]
+  }
+}
