@@ -28,7 +28,7 @@ app.use(cors());
 
 const { check, validationResult } = require("express-validator");
 
-//Error handling code using express
+//Error handling code using express.
 app.use(
   bodyParser.urlencoded({
     extended: true,
