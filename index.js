@@ -63,7 +63,7 @@ app.post(
   // Validation logic
   //.not().isEmpty = "is not empty"
   //.isLegnth({min:5}) = minimum of 5 characters is allowed
-  [check("Username", "Username is required").isLegnth({ min: 5 }), check("")],
+  [check("Username", "Username is required").isLength({ min: 5 }), check("")],
 
   (req, res) => {
     let hashedPassword = Users.hashPassword(req.body.Password);
