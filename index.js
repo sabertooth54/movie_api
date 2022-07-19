@@ -3,13 +3,15 @@ Models = require("./models.js");
 
 Movies = Models.Movie;
 Users = Models.User;
-/*
-mongoose.connect("mongodb://localhost:27017/", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-*/
 
+/*mongoose.connect(
+  "mongodb+srv://pearain:peajail888@cluster0.6zzqy.mongodb.net/myFlixDB?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+*/
 mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -23,9 +25,6 @@ const app = express();
 const bodyParser = require("body-parser"),
   methodOverride = require("method-override");
 
-const cors = require("cors");
-app.use(cors());
-
 const { check, validationResult } = require("express-validator");
 
 //Error handling code using express.
@@ -34,6 +33,9 @@ app.use(
     extended: true,
   })
 );
+
+const cors = require("cors");
+app.use(cors());
 
 let auth = require("./auth")(app);
 
@@ -96,11 +98,11 @@ app.post(
 );
 
 // this code checks the validation object for errors. For the above code CREATE Add a user
-let errors = validationResult(req);
+//let errors = validationResult(req);
 
-if (!errors.isEmpty()) {
-  return res.status(422).json({ errors: errors.array() });
-}
+//if (!errors.isEmpty()) {
+//return res.status(422).json({ errors: errors.array() });
+//}
 
 //READ Get all users
 
