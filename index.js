@@ -5,7 +5,7 @@ Movies = Models.Movie;
 Users = Models.User;
 
 /*mongoose.connect(
-  "mongodb+srv://pearain:peajail888@cluster0.6zzqy.mongodb.net/myFlixDB?retryWrites=true&w=majority",
+ ",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
