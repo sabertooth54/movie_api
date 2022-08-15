@@ -58,6 +58,57 @@ app.get("/", (req, res) => {
   res.send("Welcome to the next level of watching movies!");
 });
 
+//READ Get a user by username
+
+app.get(
+  "/users/:Username",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Users.findOne({ Username: req.params.Username })
+      .then((user) => {
+        res.json(user);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
+//READ Get all users
+
+app.get(
+  "/users",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Users.find()
+      .then((users) => {
+        res.status(201).json(users);
+      })
+      .catch(() => {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
+//READ Get all Movies
+
+app.get(
+  "/movies",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Movies.find()
+      .then((movies) => {
+        res.status(201).json(movies);
+      })
+      .catch(() => {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
 //CREATE Add a user.
 
 app.post(
@@ -103,57 +154,6 @@ app.post(
 //if (!errors.isEmpty()) {
 //return res.status(422).json({ errors: errors.array() });
 //}
-
-//READ Get all users
-
-app.get(
-  "/users",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    Users.find()
-      .then((users) => {
-        res.status(201).json(users);
-      })
-      .catch(() => {
-        console.error(err);
-        res.status(500).send("Error: " + err);
-      });
-  }
-);
-
-//READ Get all Movies
-
-app.get(
-  "/movies",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    Movies.find()
-      .then((movies) => {
-        res.status(201).json(movies);
-      })
-      .catch(() => {
-        console.error(err);
-        res.status(500).send("Error: " + err);
-      });
-  }
-);
-
-//READ Get a user by username
-
-app.get(
-  "/users/:Username",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    Users.findOne({ Username: req.params.Username })
-      .then((user) => {
-        res.json(user);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).send("Error: " + err);
-      });
-  }
-);
 
 //UPDATE Update User credentials
 
