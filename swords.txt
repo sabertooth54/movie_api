@@ -1,0 +1,17 @@
+
+{
+    "Username": "swords",
+    "Password": "swords23",
+    "Email": "swords3@gmail.com",
+    "Birthday": "10.08.2009"
+}
+
+{
+    "Username": "swords",
+    "Password": "$2b$10$RtM/trHa6Z/3TY8nMHo/5u8VPOaywIXBbpxNtRi6GL/2/Iv055CCe",
+    "Email": "swords3@gmail.com",
+    "Birthday": "2009-10-08T00:00:00.000Z",
+    "FavoriteMovies": [],
+    "_id": "62f2d618585ec99dd5c1bb1a",
+    "__v": 0
+}
